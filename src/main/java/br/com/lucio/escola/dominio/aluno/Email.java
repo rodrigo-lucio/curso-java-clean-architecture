@@ -1,4 +1,4 @@
-package br.com.lucio.escola.aluno;
+package br.com.lucio.escola.dominio.aluno;
 
 import static java.util.Objects.isNull;
 
@@ -12,6 +12,10 @@ public class Email {
 			throw new IllegalArgumentException("E-mail inválido");
 		}
 		this.endereco = endereco;
+	}
+
+	public String getEndereco() {
+		return endereco;
 	}
 	
 }

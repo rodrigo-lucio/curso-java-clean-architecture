@@ -1,4 +1,4 @@
-package br.com.lucio.escola.aluno;
+package br.com.lucio.escola.dominio.aluno;
 
 public class CPF {
 
@@ -11,4 +11,9 @@ public class CPF {
 		}
 		this.numero = numero;
 	}
+
+	public String getNumero() {
+		return numero;
+	}
+	
 }
