@@ -1,5 +1,7 @@
 package br.com.lucio;
 
+import br.com.lucio.escola.aluno.Aluno;
+
 public class Indicacao {
 
 	private Aluno indicado;
