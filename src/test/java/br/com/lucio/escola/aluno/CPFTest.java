@@ -1,4 +1,4 @@
-package br.com.lucio;
+package br.com.lucio.escola.aluno;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertThrows;
