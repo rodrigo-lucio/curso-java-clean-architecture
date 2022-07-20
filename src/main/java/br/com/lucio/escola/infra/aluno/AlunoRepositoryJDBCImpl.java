@@ -8,13 +8,13 @@ import br.com.lucio.escola.dominio.aluno.Aluno;
 import br.com.lucio.escola.dominio.aluno.AlunoRepository;
 import br.com.lucio.escola.dominio.aluno.CPF;
 
-public class AlunoRepositoryJDBC implements AlunoRepository { 
+public class AlunoRepositoryJDBCImpl implements AlunoRepository { 
 	/* As implementações em infra podem enxergar as partes mais internas do dominio, o que nao pode é ao contrario */
 	/* A camada de dominio conversa com as implementações via interface, desacoplando e nao dando problema quando tem alterações */
 
 	private Connection connection;
 	
-	public AlunoRepositoryJDBC(Connection connection) {
+	public AlunoRepositoryJDBCImpl(Connection connection) {
 		this.connection = connection;
 	}
 

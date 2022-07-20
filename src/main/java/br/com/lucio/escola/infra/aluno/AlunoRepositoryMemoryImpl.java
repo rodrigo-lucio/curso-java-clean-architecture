@@ -7,7 +7,7 @@ import br.com.lucio.escola.dominio.aluno.Aluno;
 import br.com.lucio.escola.dominio.aluno.AlunoRepository;
 import br.com.lucio.escola.dominio.aluno.CPF;
 
-public class AlunoRepositoryMemory implements AlunoRepository {
+public class AlunoRepositoryMemoryImpl implements AlunoRepository {
 
 	private List<Aluno> matriculados = new ArrayList<>();
 
