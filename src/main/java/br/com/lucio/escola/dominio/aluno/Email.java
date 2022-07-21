@@ -2,6 +2,9 @@ package br.com.lucio.escola.dominio.aluno;
 
 import static java.util.Objects.isNull;
 
+import lombok.ToString;
+
+@ToString
 public class Email {
 
 	private String endereco;
@@ -9,7 +12,7 @@ public class Email {
 	public Email(String endereco) {
 		if(isNull(endereco) || 
 				!endereco.matches("^[a-zA-Z0-9._]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$")) {
-			throw new IllegalArgumentException("E-mail inv·lido");
+			throw new IllegalArgumentException("E-mail inv√°lido");
 		}
 		this.endereco = endereco;
 	}

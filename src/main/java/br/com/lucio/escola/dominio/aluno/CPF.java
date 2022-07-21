@@ -1,5 +1,8 @@
 package br.com.lucio.escola.dominio.aluno;
 
+import lombok.ToString;
+
+@ToString
 public class CPF {
 
 	private String numero;

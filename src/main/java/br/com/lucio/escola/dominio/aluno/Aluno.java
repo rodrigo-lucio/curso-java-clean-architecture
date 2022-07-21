@@ -3,6 +3,9 @@ package br.com.lucio.escola.dominio.aluno;
 import java.util.ArrayList;
 import java.util.List;
 
+import lombok.ToString;
+
+@ToString
 public class Aluno {
 
 	private CPF cpf;
