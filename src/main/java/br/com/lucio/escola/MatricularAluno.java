@@ -22,7 +22,7 @@ public class MatricularAluno {
 
         AlunoRepository repository = new AlunoRepositoryMemoryImpl();
         MatricularAlunoService service = new MatricularAlunoService(repository);
-        service.executa(dto);
+        service.executa(dto.toAluno());
 
         repository.listarAlunosMatriculados().forEach(a -> System.out.println(a.toString()));
 

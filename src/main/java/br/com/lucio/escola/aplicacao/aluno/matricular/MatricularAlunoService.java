@@ -11,8 +11,8 @@ public class MatricularAlunoService {
         this.repository = repository;
     }
 
-    public void executa(MatricularAlunoDTO dadosAluno) {
-        Aluno aluno = dadosAluno.toAluno();
+    //Pattern Command
+    public void executa(Aluno aluno) {
         repository.matricular(aluno);
     }
     
