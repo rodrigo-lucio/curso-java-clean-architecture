@@ -1,6 +1,7 @@
 package br.com.lucio.escola.dominio.aluno;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import lombok.ToString;
@@ -16,6 +17,10 @@ public class Aluno {
 	private String senha; 
 
 	public void adicionarTelefone(String ddd, String numero) {
+		if(this.telefones.size() == 2) {
+			throw new IllegalArgumentException("Só pode ser cadastrado dois telefones por aluno");
+		}
+		
 		this.telefones.add(new Telefone(ddd, numero));
 	}
 
@@ -37,4 +42,8 @@ public class Aluno {
 		return email;
 	}
 
+	public List<Telefone> getTelefones() {
+		return Collections.unmodifiableList(this.telefones);
+	}
+	
 }

@@ -4,6 +4,11 @@ import static java.util.Objects.isNull;
 
 import java.util.Objects;
 
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+
+@EqualsAndHashCode
+@Getter
 public class Telefone {
 
 	private String ddd;
@@ -14,25 +19,18 @@ public class Telefone {
 		this.numero = numero;
 
 		if (Objects.isNull(ddd) || isNull(numero)) {
-			throw new IllegalArgumentException("DDD e Número são obrigatórios");
+			throw new IllegalArgumentException("DDD e Nï¿½mero sï¿½o obrigatï¿½rios");
 		}
 
 		if (!ddd.matches("\\d{2}")) {
-			throw new IllegalArgumentException("DDD inválido");
+			throw new IllegalArgumentException("DDD invï¿½lido");
 		}
 
 		if (!numero.matches("\\d{8}|\\d{9}")) {
-			throw new IllegalArgumentException("Número inválido");
+			throw new IllegalArgumentException("Nï¿½mero invï¿½lido");
 		}
 
 	}
 
-	public String getDdd() {
-		return ddd;
-	}
-
-	public String getNumero() {
-		return numero;
-	}
 
 }
