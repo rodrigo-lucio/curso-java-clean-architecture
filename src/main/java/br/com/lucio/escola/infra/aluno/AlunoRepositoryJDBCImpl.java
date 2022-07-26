@@ -2,11 +2,14 @@ package br.com.lucio.escola.infra.aluno;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Iterator;
 import java.util.List;
 
 import br.com.lucio.escola.dominio.aluno.Aluno;
 import br.com.lucio.escola.dominio.aluno.AlunoRepository;
 import br.com.lucio.escola.dominio.aluno.CPF;
+import br.com.lucio.escola.dominio.aluno.Telefone;
 
 public class AlunoRepositoryJDBCImpl implements AlunoRepository { 
 	/* As implementações em infra podem enxergar as partes mais internas do dominio, o que nao pode é ao contrario */
@@ -27,7 +30,15 @@ public class AlunoRepositoryJDBCImpl implements AlunoRepository {
 			ps.setString(2, aluno.getNome());
 			ps.setString(3, aluno.getEmail().getEndereco());
 			ps.execute();
-		} catch (Exception e) {
+			
+		    sql = "INSERT INTO telefone (ddd, numero) values (?, ?)";
+		    ps = connection.prepareStatement(sql);
+		    for(Telefone telefone : aluno.getTelefones()) {
+		    	ps.setString(1, telefone.getDdd());
+		    	ps.setString(2, telefone.getNumero());
+		    	ps.execute();
+		    }
+		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
 		
