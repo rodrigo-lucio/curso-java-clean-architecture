@@ -2,13 +2,22 @@ package br.com.lucio.escola.dominio.aluno;
 
 import java.time.format.DateTimeFormatter;
 
-public class LogAlunoMatriculado {
+import br.com.lucio.escola.dominio.Evento;
+import br.com.lucio.escola.dominio.Ouvinte;
 
-	public void reageAo(AlunoMatriculadoEvento evento) {
-		String momentoFormatado = evento.momento().format(DateTimeFormatter.ofPattern("dd/MM/aaaa HH:mm:ss"));
+public class LogAlunoMatriculado extends Ouvinte {
+
+	@Override
+	public void reageAo(Evento evento) {
+		String momentoFormatado = evento.momento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:SS"));
 		System.out.println(String.format("Aluno com CPF %s matriculado em %s", 
-				evento.getCpfAluno().getNumero(),
+				((AlunoMatriculadoEvento) evento).getCpfAluno(),
 				momentoFormatado));
+	}
+
+    @Override
+	protected boolean deveProcessar(Evento evento) {
+		return evento instanceof AlunoMatriculadoEvento;
 	}
 	
 }
