@@ -3,7 +3,6 @@ package br.com.lucio.escola.infra.aluno;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.Iterator;
 import java.util.List;
 
 import br.com.lucio.escola.dominio.aluno.Aluno;
