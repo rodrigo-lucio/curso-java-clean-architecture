@@ -3,6 +3,7 @@ package br.com.lucio.escola.academico.dominio.aluno;
 import java.time.LocalDateTime;
 
 import br.com.lucio.escola.academico.dominio.Evento;
+import br.com.lucio.escola.shared.dominio.CPF;
 
 public class AlunoMatriculadoEvento implements Evento {
 

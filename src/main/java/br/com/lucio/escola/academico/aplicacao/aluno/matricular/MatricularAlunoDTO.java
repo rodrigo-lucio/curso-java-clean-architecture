@@ -1,8 +1,8 @@
 package br.com.lucio.escola.academico.aplicacao.aluno.matricular;
 
 import br.com.lucio.escola.academico.dominio.aluno.Aluno;
-import br.com.lucio.escola.academico.dominio.aluno.CPF;
 import br.com.lucio.escola.academico.dominio.aluno.Email;
+import br.com.lucio.escola.shared.dominio.CPF;
 import lombok.Builder;
 import lombok.Data;
 

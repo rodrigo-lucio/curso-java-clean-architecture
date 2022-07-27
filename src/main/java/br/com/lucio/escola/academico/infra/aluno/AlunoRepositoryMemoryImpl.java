@@ -5,7 +5,7 @@ import java.util.List;
 
 import br.com.lucio.escola.academico.dominio.aluno.Aluno;
 import br.com.lucio.escola.academico.dominio.aluno.AlunoRepository;
-import br.com.lucio.escola.academico.dominio.aluno.CPF;
+import br.com.lucio.escola.shared.dominio.CPF;
 
 public class AlunoRepositoryMemoryImpl implements AlunoRepository {
 

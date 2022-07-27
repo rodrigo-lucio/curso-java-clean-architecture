@@ -1,4 +1,4 @@
-package br.com.lucio.escola.academico.dominio.aluno;
+package br.com.lucio.escola.shared.dominio;
 
 import static java.util.Objects.isNull;
 

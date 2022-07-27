@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import br.com.lucio.escola.shared.dominio.CPF;
 import lombok.ToString;
 
 @ToString

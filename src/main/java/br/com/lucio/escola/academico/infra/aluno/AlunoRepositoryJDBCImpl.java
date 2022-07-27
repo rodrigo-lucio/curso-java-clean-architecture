@@ -7,8 +7,8 @@ import java.util.List;
 
 import br.com.lucio.escola.academico.dominio.aluno.Aluno;
 import br.com.lucio.escola.academico.dominio.aluno.AlunoRepository;
-import br.com.lucio.escola.academico.dominio.aluno.CPF;
 import br.com.lucio.escola.academico.dominio.aluno.Telefone;
+import br.com.lucio.escola.shared.dominio.CPF;
 
 public class AlunoRepositoryJDBCImpl implements AlunoRepository { 
 	/* As implementações em infra podem enxergar as partes mais internas do dominio, o que nao pode é ao contrario */

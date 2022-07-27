@@ -2,7 +2,7 @@ package br.com.lucio.escola.gamificacao.dominio.selo;
 
 import java.util.List;
 
-import br.com.lucio.escola.academico.dominio.aluno.CPF;
+import br.com.lucio.escola.shared.dominio.CPF;
 
 public interface SeloRepository {
 
