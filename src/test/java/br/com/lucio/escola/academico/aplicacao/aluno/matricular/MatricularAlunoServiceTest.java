@@ -13,10 +13,10 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import br.com.lucio.escola.academico.aplicacao.aluno.matricular.MatricularAlunoDTO;
 import br.com.lucio.escola.academico.aplicacao.aluno.matricular.MatricularAlunoService;
-import br.com.lucio.escola.academico.dominio.Evento;
-import br.com.lucio.escola.academico.dominio.PublicadorEventos;
 import br.com.lucio.escola.academico.dominio.aluno.Aluno;
 import br.com.lucio.escola.academico.dominio.aluno.AlunoRepository;
+import br.com.lucio.escola.shared.dominio.evento.Evento;
+import br.com.lucio.escola.shared.dominio.evento.PublicadorEventos;
 
 @ExtendWith(MockitoExtension.class)
 class MatricularAlunoServiceTest {

@@ -1,9 +1,9 @@
 package br.com.lucio.escola.academico.aplicacao.aluno.matricular;
 
-import br.com.lucio.escola.academico.dominio.PublicadorEventos;
 import br.com.lucio.escola.academico.dominio.aluno.Aluno;
 import br.com.lucio.escola.academico.dominio.aluno.AlunoMatriculadoEvento;
 import br.com.lucio.escola.academico.dominio.aluno.AlunoRepository;
+import br.com.lucio.escola.shared.dominio.evento.PublicadorEventos;
 
 public class MatricularAlunoService {
 

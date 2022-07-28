@@ -2,11 +2,11 @@ package br.com.lucio.escola.academico;
 
 import br.com.lucio.escola.academico.aplicacao.aluno.matricular.MatricularAlunoDTO;
 import br.com.lucio.escola.academico.aplicacao.aluno.matricular.MatricularAlunoService;
-import br.com.lucio.escola.academico.dominio.PublicadorEventos;
 import br.com.lucio.escola.academico.dominio.aluno.AlunoRepository;
 import br.com.lucio.escola.academico.dominio.aluno.EnviaEmailAlunoMatriculado;
 import br.com.lucio.escola.academico.dominio.aluno.LogAlunoMatriculado;
 import br.com.lucio.escola.academico.infra.aluno.AlunoRepositoryMemoryImpl;
+import br.com.lucio.escola.shared.dominio.evento.PublicadorEventos;
 
 public class MatricularAluno {
 
