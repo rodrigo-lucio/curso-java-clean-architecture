@@ -7,11 +7,11 @@ import br.com.lucio.escola.shared.dominio.evento.Evento;
 import br.com.lucio.escola.shared.dominio.evento.Ouvinte;
 import br.com.lucio.escola.shared.dominio.evento.TipoEvento;
 
-public class GeraSeloAlunoNovato extends Ouvinte {
+public class GeraSeloAlunoNovatoService extends Ouvinte {
 
 	private SeloRepository seloRepository; 
 	
-	public GeraSeloAlunoNovato(SeloRepository seloRepository) {
+	public GeraSeloAlunoNovatoService(SeloRepository seloRepository) {
 		this.seloRepository = seloRepository;
 	}
 
@@ -20,9 +20,10 @@ public class GeraSeloAlunoNovato extends Ouvinte {
 		/* Fizemos dessa forma, para nao acessar informaçoes de AlunoMatriculadoEvento, 
 		 * que esta no modulo: br.com.lucio.escola.academico \
 		 * Já CPF esta no contexto compartilhado */
-		CPF cpfAluno = (CPF) evento.informacoes().get("cpf"); 
+		CPF cpfAluno = (CPF) evento.informacoes().get("CPF"); 
 		Selo seloNovato = new Selo(cpfAluno, "Novato");
 		seloRepository.adicionar(seloNovato);
+		System.out.println("Gerando selo para aluno novato:" + cpfAluno);
 	}
 
 	@Override

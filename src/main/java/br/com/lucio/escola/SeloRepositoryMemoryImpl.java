@@ -1,4 +1,4 @@
-package br.com.lucio.escola.gamificacao.infra.selo;
+package br.com.lucio.escola;
 
 import java.util.ArrayList;
 import java.util.List;

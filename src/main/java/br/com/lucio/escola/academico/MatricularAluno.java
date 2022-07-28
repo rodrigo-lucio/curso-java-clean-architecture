@@ -1,11 +1,14 @@
 package br.com.lucio.escola.academico;
 
+import br.com.lucio.escola.SeloRepositoryMemoryImpl;
 import br.com.lucio.escola.academico.aplicacao.aluno.matricular.MatricularAlunoDTO;
 import br.com.lucio.escola.academico.aplicacao.aluno.matricular.MatricularAlunoService;
 import br.com.lucio.escola.academico.dominio.aluno.AlunoRepository;
 import br.com.lucio.escola.academico.dominio.aluno.EnviaEmailAlunoMatriculado;
 import br.com.lucio.escola.academico.dominio.aluno.LogAlunoMatriculado;
 import br.com.lucio.escola.academico.infra.aluno.AlunoRepositoryMemoryImpl;
+import br.com.lucio.escola.gamificacao.aplicacao.GeraSeloAlunoNovatoService;
+import br.com.lucio.escola.gamificacao.dominio.selo.SeloRepository;
 import br.com.lucio.escola.shared.dominio.evento.PublicadorEventos;
 
 public class MatricularAluno {
@@ -23,9 +26,13 @@ public class MatricularAluno {
                 .email(email) //
                 .build(); //
         
+        
+        SeloRepository seloRepository = new SeloRepositoryMemoryImpl();
+        
         PublicadorEventos publicador = new PublicadorEventos();
         publicador.adicionarOuvinte(new LogAlunoMatriculado());
         publicador.adicionarOuvinte(new EnviaEmailAlunoMatriculado());
+        publicador.adicionarOuvinte(new GeraSeloAlunoNovatoService(seloRepository));
 
         AlunoRepository repository = new AlunoRepositoryMemoryImpl();
         MatricularAlunoService service = new MatricularAlunoService(repository, publicador);
